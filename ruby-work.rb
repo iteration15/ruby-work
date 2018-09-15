@@ -16,3 +16,17 @@ width = 5
 height = 13
 volume = length * width * height
 puts "the volume of the box is: " + volume.to_s #convert int to string
+puts "\n"
+
+#playing with conditionals
+age = 88
+if age < 29
+  puts "you're young!"
+elsif age == 43
+  puts "great age!"
+else
+  puts "you're too old!"
+end
+
+#single line conditionals
+puts "\nvery very old!" if age > 80
