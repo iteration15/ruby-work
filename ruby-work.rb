@@ -19,7 +19,7 @@ puts "the volume of the box is: " + volume.to_s #convert int to string
 puts "\n"
 
 #playing with conditionals
-age = 88
+age = 7
 if age < 29
   puts "you're young!"
 elsif age == 43
@@ -30,3 +30,7 @@ end
 
 #single line conditionals
 puts "\nvery very old!" if age > 80
+puts "\nyou're just a baby" unless age > 20
+
+#ternary statement
+age > 80 ? puts("\nyoure super old!") : puts("\nnot too old yet")
