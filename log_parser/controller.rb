@@ -6,6 +6,7 @@ class LogParserController
     @current_view = FileDialogView.new
     @current_view.clear_display
     @current_view.set_cursor
+    @current_view.display
   end
 
   def run
@@ -15,7 +16,7 @@ class LogParserController
         while next_chars = $stdin.read_nonblock(10) do
           user_input = "#{user_input}#{next_chars}"
         end
-      rescue
+      rescue IO::WaitReadable
       end
       if @current_view.quittable? && user_input == 'q'
         break
