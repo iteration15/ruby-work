@@ -6,7 +6,7 @@ class LogParserController
     @current_view = FileDialogView.new
     @current_view.clear_display
     @current_view.set_cursor
-    @current_view.display
+    @current_view.display @log_file
   end
 
   def run
